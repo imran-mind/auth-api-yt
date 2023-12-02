@@ -8,6 +8,7 @@ const ensureAuthenticated = (req, res, next)=>{
     }
     try{
         const decoded = jwt.verify(req.headers['authorization'], process.env.SECRET);
+        console.log(decoded);
         return next();
     }catch(err){
         return res.status(403)
