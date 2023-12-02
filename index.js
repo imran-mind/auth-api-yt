@@ -12,5 +12,6 @@ app.use('/api/v1', routes);
 app.listen(PORT, ()=>{
     console.log(`Server is up and running on PORT: ${PORT}`);
 })
-
+// Export the Express API
+module.exports = app
 //
